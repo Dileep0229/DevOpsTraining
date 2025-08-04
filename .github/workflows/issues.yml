@@ -1,4 +1,4 @@
-name: issues Workflow
+name: Issues Workflow
 
 on: issues
 
