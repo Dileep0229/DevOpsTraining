@@ -1,4 +1,4 @@
-name: Filters Workflow
+name: Open ActionItem Workflow
 
 on: 
  pull_request: 
