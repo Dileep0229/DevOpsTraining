@@ -2,7 +2,7 @@ name: Filters Sync Workflow
 
 on: 
  pull_request: 
-  types: synchronized
+  types: synchronize
 
 jobs:
   build:
