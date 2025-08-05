@@ -1,4 +1,4 @@
-name: Filters Sync Workflow
+name: Synchronized ActionItem Workflow
 
 on: 
  pull_request: 
