@@ -1,4 +1,4 @@
-name: Filters Workflow
+name: Filters Sync Workflow
 
 on: 
  pull_request: 
