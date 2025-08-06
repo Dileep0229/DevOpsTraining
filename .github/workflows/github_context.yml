@@ -1,0 +1,28 @@
+name: Github Context Workflow
+ 
+on:
+  workflow_dispatch
+ 
+jobs:
+  github-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub context information
+        run: |
+          echo "Repository Details: ${{ github.repository }}"
+          echo "Repository ID: ${{ github.repository_id }}"
+          echo "Repository URL: ${{ github.repository_url }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Reference Details: ${{ github.ref }}"
+          echo "Trigger Event: ${{ github.event_name }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Run Number: ${{ github.run_number }}"
+      - name: Sample
+        if: github.ref == 'refs/heads/main'
+        run: echo 'deploy'
+      - name: Pull Request Trigger Event
+        if: github.event_name == 'pull_request'
+        run: echo 'trigger the pull workflow'
+      - name: Push Request
+        if: github.event_name == 'push'
+        run: echo 'trigger the push workflow'
