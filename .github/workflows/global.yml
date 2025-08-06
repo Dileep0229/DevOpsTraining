@@ -1,4 +1,4 @@
-name: Global Variable Example
+name: Global Variable AND Secrets
  
 on:
   workflow_dispatch
@@ -19,3 +19,5 @@ jobs:
          Message: "Step local level env"
       - name: Print global
         run: echo "${{ vars.Message }}"
+      - name: Print Password
+        run: echo "${{secrets.PASSWORD}}"
