@@ -11,5 +11,3 @@ jobs:
      with: 
        java-version: '17'
        distribution: microsoft
-   - name: Pint Java Version
-   - run: java --version
