@@ -1,0 +1,27 @@
+name: Needs Example
+
+on: 
+   workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+     - name: print
+       run: echo 'build'   
+   
+  test:
+    needs: build
+    runs-on: windows-latest
+    steps: 
+     - name: print test-chrome
+       run: echo 'test - chrome'
+     - name: print test-edge
+       run: echo 'test - edge'     
+  deploy:
+    needs: [build,test]
+    runs-on: ubuntu-latest
+    steps:
+     - name: print deploy
+       run: echo 'deploy'  
+      
