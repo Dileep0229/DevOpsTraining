@@ -1,0 +1,21 @@
+name: Global Variable Example
+ 
+on:
+  workflow_dispatch
+ 
+env:
+  Message: "Workflow level env"
+ 
+jobs:
+  global-example:
+    name: Env Scope
+    runs-on: ubuntu-latest
+    env:
+      Message: "Job level env"
+    steps:
+      - name: Print local
+        run: echo "${{ env.Message }}"
+        env:
+         Message: "Step local level env"
+      - name: Print global
+        run: echo "${{ vars.Message }}"
