@@ -4,7 +4,7 @@ on:
  workflow_dispatch
 
 jobs:
- matrix-job: 
+ matrix-jobs: 
    runs-on: ${{matrix.os}}
    strategy: 
      fail-fast: false
