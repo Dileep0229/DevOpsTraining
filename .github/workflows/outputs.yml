@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
  outputs:
   runs-on: ubuntu-latest
-  outputs: ${{steps.set-message.output.message}}
+  outputs: ${{steps.set-message.output.message1}}
   steps:
    - id: set-message
      run:
