@@ -1,13 +1,16 @@
 name: Outputs
-
-on: workflow_dispatch
-
+ 
+on:
+  workflow_dispatch
+ 
 jobs:
- gen-outputs:
-  runs-on: ubuntu-latest
-  outputs: ${{steps.set-message.outputs.message1}}
-  steps:
-   - id: set-message
-     run:
-      echo 'message1=Hello' >> $GITHUB_OUTPUT
-      echo 'message2=Welcome' >> $GITHUB_OUTPUT
+  gen-outputs:
+    runs-on: ubuntu-latest
+    
+    outputs:
+      random-number: ${{ steps.random-number.outputs.number }}
+ 
+    steps: 
+      - id: random-number
+        run: |
+          echo "number=$RANDOM" >> $GITHUB_OUTPUT
