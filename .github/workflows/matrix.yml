@@ -27,3 +27,11 @@ jobs:
          total: 4
          os: windows-latest
          java: 21
+   steps:
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3.14.1
+        with:
+          java-version: ${{matrix.java.version}}
+          distribution: microsoft
+        
+   
