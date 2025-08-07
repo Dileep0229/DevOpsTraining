@@ -11,7 +11,7 @@ jobs:
     steps: 
       - id: random-num-gen
         run: |
-          echo "number=$RANDOM" >> $GITHUB_OUTPUT
+          echo "number=101" >> $GITHUB_OUTPUT
           echo "msg=Ramdom Number" >> $GITHUB_OUTPUT
   dis-outputs:
     needs: gen-outputs
