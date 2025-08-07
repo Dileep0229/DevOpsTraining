@@ -6,7 +6,7 @@ jobs:
   gen-outputs:
     runs-on: ubuntu-latest
     outputs:
-      message: ${{steps.random-num.outputs.number }}
+      message: ${{steps.random-num-gen.outputs.number }}
  
     steps: 
       - id: random-num-gen
