@@ -8,7 +8,7 @@ env:
  
 jobs:
   global-example:
-    name: Env Scope
+    name: Global Scope and Secrets
     runs-on: ubuntu-latest
     env:
       Message: "Job level env"
