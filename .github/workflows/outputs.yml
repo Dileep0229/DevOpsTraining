@@ -3,7 +3,7 @@ name: Outputs
 on: workflow_dispatch
 
 jobs:
- outputs:
+ gen-outputs:
   runs-on: ubuntu-latest
   outputs: ${{steps.set-message.outputs.message1}}
   steps:
